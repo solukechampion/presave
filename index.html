@@ -21,27 +21,32 @@
   <style>
     body { font-family: sans-serif; text-align: center; padding: 2rem; background: #111; color: white; }
     h1 { margin-bottom: 1rem; }
-    button { background: #1DB954; color: white; border: none; padding: 1rem 2rem; font-size: 1.2rem; border-radius: 8px; cursor: pointer; }
+    a.button {
+      background: #1DB954;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
   <h1>🎵 Pre‑Save Luke Champion</h1>
   <p>Instagram’s browser may block this link. Tap below to open it in your browser:</p>
-  <button id="openLink">Open in Safari / Chrome</button>
+  <a href="https://hypeddit.com/lukechampion" target="_blank" rel="noopener noreferrer" class="button">Open in Safari / Chrome</a>
 
   <script>
-    const link = "https://hypeddit.com/lukechampion";
     const ua = navigator.userAgent || "";
     const isInIg = ua.includes("Instagram");
 
     if (!isInIg) {
-      window.location.href = link;
+      window.location.href = "https://hypeddit.com/lukechampion";
     }
-
-    document.getElementById("openLink").onclick = () => {
-      window.open(link, "_blank");
-    };
   </script>
 
 </body>
